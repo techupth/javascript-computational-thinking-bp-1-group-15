@@ -1,10 +1,18 @@
 function getLetterFrequency(words) {
   // Start coding here
+  let obj = {};
+  for (let i of words.toLowerCase()) {
+    if (obj[i]) {
+      obj[i]++;
+    } else {
+      obj[i] = 1;
+    }
+  } return obj;
 }
 
 const str = "Techupth";
 
-getLetterFrequency(str);
+console.log(getLetterFrequency(str));
 
 /* Output:
 {
